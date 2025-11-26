@@ -84,19 +84,10 @@
 
 /* common FontSize  */
 
-.title-big {
-  font-family: Figtree;
-  font-size: 80px;
-  color: var(--primary-color);
+.title {
+  font-size: 26px;
+  color: var(--title-color);
   line-height: 1.1;
-  margin: 0;
-}
-
-.title-hero {
-  font-family: Figtree;
-  font-size: 65px;
-  color: var(--primary-color);
-  line-height: 1.2;
   margin: 0;
 }
 
@@ -129,8 +120,8 @@
 }
 
 .big-text {
-  font-size: 19px !important;
-  color: black;
+  font-size: 14px !important;
+  color: var(--title-color);
 }
 
 .small-text {
@@ -138,7 +129,8 @@
 }
 
 .text {
-  font-size: 15px;
+  color: var(--title-color);
+  font-size: 13px;
 }
 
 .semi-bold {
@@ -281,6 +273,10 @@
 
   .text {
     font-size: 13px;
+  }
+
+  .big-text{
+    font-size: 15px;
   }
 
   .padded-container {
