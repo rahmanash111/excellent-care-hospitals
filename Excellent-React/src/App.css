@@ -2,51 +2,11 @@
 .main-content {
   position: relative;
   width: 100%;
-  margin-top: 150px;
+  padding: 0 15% 0;
 }
 
-.universal-component-wrapper{
+.universal-component-wrapper {
   width: 100%;
-}
-
-/* when the modal is open we disable the scroll  */
-.modal-open {
-  overflow: hidden;
-}
-
-.hero-left-image {
-  z-index: -1;
-  position: absolute;
-  width: 180px;
-  height: 550px;
-  left: 0px;
-  top: -50px;
-}
-
-.hero-right-up-image {
-  z-index: 10;
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  right: 0;
-  top: -100px;
-}
-
-.hero-right-down-image {
-  z-index: 10;
-  position: absolute;
-  width: 220px;
-  height: 600px;
-  right: 0;
-  top: 30px;
-}
-
-/* for the RULER.jsx file, the line that seperates each component */
-.ruler {
-  height: 1px;
-  width: 76%;
-  background-color: black;
-  margin: 0 auto;
 }
 
 /* the common left and right padding for the components */
@@ -65,13 +25,8 @@
 
 /* Font Family */
 
-.inter {
-  font-family: Inter !important;
-}
-
-/* for titles and big texts */
-.ttf {
-  font-family: Test-Tiempos-Fine !important;
+.figtree {
+  font-family: Figtree !important;
 }
 
 /* Button */
@@ -110,56 +65,7 @@
   background-color: var(--primary-color);
 }
 
-/* Margin and padding */
-
-.m-0 {
-  margin: 0 !important;
-}
-
-.m-auto {
-  margin: auto;
-}
-
-.mt-0 {
-  margin-top: 0;
-}
-
-.mb-0 {
-  margin-bottom: 0;
-}
-
-.ml-0 {
-  margin-left: 0;
-}
-
-.mr-0 {
-  margin-right: 0;
-}
-
-.p-0 {
-  padding: 0;
-}
-
-.p-auto {
-  padding: auto;
-}
-
-.pt-0 {
-  padding-top: 0;
-}
-
-.pb-0 {
-  padding-bottom: 0;
-}
-
-.pr-0 {
-  padding-right: 0;
-}
-
-.pl-0 {
-  padding-left: 0;
-}
-
+/* 
 .opacity-0 {
   opacity: 0;
 }
@@ -178,53 +84,44 @@
 
 /* common FontSize  */
 
-.title-big {
-  font-family: Test-Tiempos-Fine;
-  font-size: 80px;
-  color: var(--primary-color);
+.title {
+  font-size: 26px;
+  color: var(--title-color);
   line-height: 1.1;
   margin: 0;
 }
 
-.title-hero {
-  font-family: Test-Tiempos-Fine;
-  font-size: 65px;
-  color: var(--primary-color);
-  line-height: 1.2;
-  margin: 0;
-}
-
 .title-medium {
-  font-family: Test-Tiempos-Fine;
+  font-family: Figtree;
   font-size: 38px;
   color: var(--primary-color);
   margin: 0;
 }
 
 .title-medium-black {
-  font-family: Test-Tiempos-Fine;
+  font-family: Figtree;
   font-size: 38px;
   margin: 0;
   color: black;
 }
 
 .title-small {
-  font-family: Test-Tiempos-Fine;
+  font-family: Figtree;
   font-size: 32px;
   color: var(--primary-color);
   margin: 0;
 }
 
 .title-small-black {
-  font-family: Test-Tiempos-Fine;
+  font-family: Figtree;
   font-size: 32px;
   color: black;
   margin: 0;
 }
 
 .big-text {
-  font-size: 19px !important;
-  color: black;
+  font-size: 14px !important;
+  color: var(--title-color);
 }
 
 .small-text {
@@ -232,7 +129,8 @@
 }
 
 .text {
-  font-size: 15px;
+  color: var(--title-color);
+  font-size: 13px;
 }
 
 .semi-bold {
@@ -281,7 +179,7 @@
 
 /* Border */
 
-/* .b-r {
+.b-r {
   border: 1px solid red;
 }
 
@@ -291,7 +189,7 @@
 
 .b-g {
   border: 1px solid green;
-} */
+}
 
 .icon-wrapper {
   position: relative;
@@ -377,6 +275,10 @@
     font-size: 13px;
   }
 
+  .big-text{
+    font-size: 15px;
+  }
+
   .padded-container {
     padding: 0 0 0 0;
   }
@@ -394,7 +296,7 @@
   }
 
   .main-content {
-    margin-top: 120px;
+    padding: 0 5% 0;
     width: 100%;
   }
 
