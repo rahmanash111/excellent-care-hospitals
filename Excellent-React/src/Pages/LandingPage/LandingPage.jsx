@@ -10,11 +10,11 @@ import Specialties from "./Specialties";
 import Update from "./Update";
 import FAQCallbackSection from "./FAQCallbackSection";
 
-const LandingPage = () => {
+const LandingPage = ({heroRef}) => {
   return (<>
     {/* <SEO description={LANDINGPAGE_DESC} title={LANDINGPAGE_TITLE} keywords={LANDINGPAGE_KEYWORDS}/> */}
     <div className="universal-component-wrapper">
-      <HospitalHeroSection />
+      <HospitalHeroSection heroRef={heroRef}/>
       <Specialties />
       <DirectorsTabs />
       <WhyChooseUs />

@@ -3,13 +3,14 @@ import { Search, ArrowRight, MessageCircle } from 'lucide-react';
 import ScrollingBanner from './heroCarousel';
 import heroVideo from "../assets/heroVideo.mp4"
 
-const HospitalHeroSection = () => {
+const HospitalHeroSection = ({ heroRef }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <div className="relative h-screen overflow-hidden">
+      <ScrollingBanner />
       {/* Hero Section with Video Background */}
-      <div className="relative h-full">
+      <div ref={heroRef} className="relative h-full">
         {/* Video Background */}
         <video
           className="absolute inset-0 w-full h-full object-cover"

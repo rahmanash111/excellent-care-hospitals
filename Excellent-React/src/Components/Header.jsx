@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, Instagram, Facebook, Youtube, ChevronDown } from 'lucide-react';
+import logo from "../assets/xcellent-logo.png"
 
 const leftNavItems = [
   {
@@ -23,14 +24,14 @@ const rightNavItems = [
   },
 ];
 
-const Header = () => {
+const Header = ({ buttonRef }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+    <header className="fixed h-50 top-0 left-0 right-0 z-50 pointer-events-none">
       <div className="relative pointer-events-auto">
         {/* Top Contact Banner */}
-        <div className="bg-white/90 backdrop-blur-md px-2 lg:px-16 py-3 flex flex-col lg:flex-row justify-between items-center gap-4 shadow-md border-b border-white/20">
+        {/* <div className="bg-white/90 backdrop-blur-md px-2 lg:px-16 py-3 flex flex-col lg:flex-row justify-between items-center gap-4 shadow-md border-b border-white/20">
           <div className="flex items-center gap-6 flex-wrap text-gray-500">
             <div className="cursor-pointer flex items-center gap-2 text-sm">
               <Mail size={18} />
@@ -56,26 +57,16 @@ const Header = () => {
                 <Youtube size={14} />
               </a>
             </div>
-          </div>
-          <div className="flex items-center gap-4 text-gray-500">
-            <a
-              href="tel:+914440000006"
-              className="flex items-center gap-2 font-medium hover:text-gray-700 transition"
-            >
-              <Phone size={18} />
-              <span>+91-44-4000 0006</span>
-            </a>
-            <button
-              className="cursor-pointer px-6 py-2 rounded-lg font-semibold transition text-gray-500 bg-[#FFE666]"
-            >
-              Book Appointment
-            </button>
-          </div>
-        </div>
+          </div> 
+        </div>*/}
 
         {/* Glass Navigation Bar */}
         <nav className="absolute top-20 left-0 right-0 flex justify-center px-4 py-4 pointer-events-none">
-          <div className="pointer-events-auto backdrop-blur-xl bg-white/20 border border-white/40 px-8 py-4 rounded-full flex gap-8 items-center shadow-2xl text-gray-500">
+          <div className="pointer-events-auto h-15 bg-white/100  px-8 py-2 rounded-xl flex gap-8 items-center shadow-2xl text-gray-500">
+
+            <div className="text-sm font-bold whitespace-nowrap text-gray-500 drop-shadow-md">
+              <img width={"150px"} src={logo} alt='header-image' />
+            </div>
             {leftNavItems.map((item) => (
               <div
                 key={item.name}
@@ -113,9 +104,6 @@ const Header = () => {
               </div>
             ))}
 
-            <div className="text-sm font-bold whitespace-nowrap text-gray-500 drop-shadow-md">
-              Xcellent Care Hospital
-            </div>
 
             {rightNavItems.map((item) => (
               <div
@@ -153,6 +141,24 @@ const Header = () => {
                 )}
               </div>
             ))}
+
+            <div className="flex items-center gap-4 text-gray-500">
+              <a
+                href="tel:+914440000006"
+                className="flex items-center gap-2 font-medium hover:text-gray-700 transition"
+              >
+                <div className='bg-[#FFE666] w-7 h-7 flex items-center justify-center rounded-full'>
+                  <Phone color="black" size={14} />
+                </div>
+                <span>+91-44-4000 0006</span>
+              </a>
+              <button
+                ref={buttonRef}
+                className="hidden cursor-pointer px-6 py-2 rounded-lg font-semibold transition text-black bg-[#FFE666]"
+              >
+                Book Appointment
+              </button>
+            </div>
           </div>
         </nav>
       </div>

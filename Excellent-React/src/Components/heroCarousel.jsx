@@ -14,13 +14,13 @@ const bannerItems = [
 
 const ScrollingBanner = () => {
   return (
-    <section className="w-full h-5 sm:h-16 relative flex items-center overflow-hidden py-8 mt-3 bg-[#FFE666]">
+    <section className="w-full h-5 sm:h-16 relative flex items-center overflow-hidden py-8 bg-[#007C9D]">
       {/* Scrolling content */}
       <div className="relative z-10 flex items-center animate-scroll font-gloock whitespace-nowrap">
         {bannerItems.map((item, index) => (
           <React.Fragment key={index}>
-            <span className="text-black text-2xl mx-4">{item}</span>
-            <Sparkles className="w-6 h-6 mx-4 text-black" />
+            <span className="text-white text-2xl mx-4">{item}</span>
+            <Sparkles className="w-6 h-6 mx-4 text-white" />
           </React.Fragment>
         ))}
       </div>
